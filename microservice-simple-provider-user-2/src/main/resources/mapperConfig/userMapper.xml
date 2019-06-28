@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.itmuch.cloud.provider.user.mapper.UserMapper">
+
+    <select id="findById" resultType="com.itmuch.cloud.provider.user.entity.UserEntity">
+        SELECT * FROM user WHERE id = #{id}
+    </select>
+    
+    <select id="userList" resultType="com.itmuch.cloud.provider.user.entity.UserEntity">
+        SELECT * FROM user
+    </select>
+    
+    <select id="findByName" resultType="com.itmuch.cloud.provider.user.entity.UserEntity">
+        SELECT * FROM user where name like #{name}
+    </select>
+    
+</mapper>
