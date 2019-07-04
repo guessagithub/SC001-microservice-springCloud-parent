@@ -39,5 +39,6 @@
     <module>microservice-simple-turbine</module>
     <module>microservice-simple-turbine-RabbitMQ</module>
     <module>microservice-simple-consumer-food</module>
+    <module>microservice-simple-gateway-zuul</module>
   </modules>
 </project>
