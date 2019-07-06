@@ -1,0 +1,27 @@
+server:
+  port: 5031
+
+spring:
+  application:
+    name: microservice-simple-gateway-zuul
+    
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://hht:123456@localhost:8761/eureka/,http://hht:123456@localhost:8762/eureka/
+    instance:
+      prefer-ip-address: true
+
+#值得注意的是Spring Boot2.x中，默认只开放了info、health两个端点
+#剩余的需要自己通过配置management.endpoints.web.exposure.include属性来加载（有include自然就有exclude，不做详细概述了）
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+zuul:
+  routes:
+    microservice-simple-consumer-movie: /movie/**
+  #排除某些路由
+  ignored-services: microservice-simple-provider-user
