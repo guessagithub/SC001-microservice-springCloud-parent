@@ -40,5 +40,6 @@
     <module>microservice-simple-turbine-RabbitMQ</module>
     <module>microservice-simple-consumer-food</module>
     <module>microservice-simple-gateway-zuul</module>
+    <module>microservice-simple-file-upload</module>
   </modules>
 </project>
