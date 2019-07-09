@@ -25,3 +25,12 @@ zuul:
     microservice-simple-consumer-movie: /movie/**
   #排除某些路由
   ignored-services: microservice-simple-provider-user
+  #禁用ZuulFilter
+  MyPreRequestLogFilter:
+    pre:
+      disable: true
+  
+  
+  
+  
+  
