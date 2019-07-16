@@ -17,7 +17,7 @@ public class MyRouteFilter extends ZuulFilter{
 
 	@Override
 	public Object run() throws ZuulException {
-		logger.info("================ 我是【zuul-1】的【route】类型的Zuul过滤器！");
+		logger.info("================ 我是【zuul-2】的【route】类型的Zuul过滤器！");
 		return null;
 	}
 

@@ -12,7 +12,7 @@ import com.netflix.hystrix.contrib.metrics.eventstream.HystrixMetricsStreamServl
 
 @SpringBootApplication
 @EnableZuulProxy
-public class ZuulApplication 
+public class ZuulApplication_2 
 {
 	
 	@Bean
@@ -27,7 +27,7 @@ public class ZuulApplication
 	
     public static void main( String[] args )
     {
-        SpringApplication.run(ZuulApplication.class, args);
+        SpringApplication.run(ZuulApplication_2.class, args);
     }
 
 	/**

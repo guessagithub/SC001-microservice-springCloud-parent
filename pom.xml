@@ -41,5 +41,6 @@
     <module>microservice-simple-consumer-food</module>
     <module>microservice-simple-gateway-zuul</module>
     <module>microservice-simple-file-upload</module>
+    <module>microservice-simple-gataway-zuul-2</module>
   </modules>
 </project>

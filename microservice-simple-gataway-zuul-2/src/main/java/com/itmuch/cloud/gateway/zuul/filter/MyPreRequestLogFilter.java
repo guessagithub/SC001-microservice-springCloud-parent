@@ -23,7 +23,7 @@ public class MyPreRequestLogFilter extends ZuulFilter{
 	public Object run() throws ZuulException {
 		RequestContext context = RequestContext.getCurrentContext();
 		HttpServletRequest request = context.getRequest();
-		logger.info(String.format("================ 【zuul-1】 send 【%s】 request to 【%s】 .", request.getMethod(), request.getRequestURL().toString()));
+		logger.info(String.format("================ 【zuul-2】 send 【%s】 request to 【%s】 .", request.getMethod(), request.getRequestURL().toString()));
 		return null;
 	}
 

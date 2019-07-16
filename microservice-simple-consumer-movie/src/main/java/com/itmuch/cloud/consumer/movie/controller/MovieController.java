@@ -14,6 +14,7 @@ import org.springframework.web.client.RestTemplate;
 
 import com.itmuch.cloud.consumer.movie.entity.UserEntity;
 import com.itmuch.cloud.consumer.movie.myfeign.UserFeignClient;
+import com.itmuch.cloud.consumer.movie.myfeign.ZuulFeignClient;
 
 @RestController
 @RequestMapping("/movie")
@@ -24,10 +25,18 @@ public class MovieController {
 	
 	@Autowired
 	private UserFeignClient userFeignClient;
+	
+	@Autowired
+	private ZuulFeignClient zuulFeignClient;
 
 	@GetMapping("/user/feign/{id}")
 	public UserEntity findByIdFeign(@PathVariable int id) {
 		return userFeignClient.findByIdFeign(id);
+	}
+
+	@GetMapping("/zuul/user/feign/{id}")
+	public UserEntity findByIdFeignZuul(@PathVariable int id) {
+		return zuulFeignClient.findByIdFeign(id);
 	}
 	
 	@GetMapping("/user/hystrix/{id}")

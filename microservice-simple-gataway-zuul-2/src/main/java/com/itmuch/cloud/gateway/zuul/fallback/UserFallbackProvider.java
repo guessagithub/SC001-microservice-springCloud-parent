@@ -14,12 +14,12 @@ import org.springframework.stereotype.Component;
 
 
 @Component
-public class MovieFallbackProvider implements FallbackProvider {
+public class UserFallbackProvider implements FallbackProvider {
 
 	@Override
 	public String getRoute() {
 		//表明是为哪个微服务提供回退
-		return "microservice-simple-consumer-movie";
+		return "microservice-simple-provider-user";
 	}
 
 	@Override
@@ -39,7 +39,7 @@ public class MovieFallbackProvider implements FallbackProvider {
 			@Override
 			public InputStream getBody() throws IOException {
 				// 响应体
-				return new ByteArrayInputStream("【zuul-1】电影微服务不可用，请稍后再试。".getBytes());
+				return new ByteArrayInputStream("【zuul-2】用户微服务不可用，请稍后再试。".getBytes());
 			}
 			
 			@Override

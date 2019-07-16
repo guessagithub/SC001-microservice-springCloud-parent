@@ -39,7 +39,7 @@ public class MovieFallbackProvider implements FallbackProvider {
 			@Override
 			public InputStream getBody() throws IOException {
 				// 响应体
-				return new ByteArrayInputStream("【zuul-1】电影微服务不可用，请稍后再试。".getBytes());
+				return new ByteArrayInputStream("【zuul-2】电影微服务不可用，请稍后再试。".getBytes());
 			}
 			
 			@Override
