@@ -43,5 +43,6 @@
     <module>microservice-simple-file-upload</module>
     <module>microservice-simple-gataway-zuul-2</module>
     <module>microservice-simple-config-server</module>
+    <module>microservice-simple-config-client</module>
   </modules>
 </project>
