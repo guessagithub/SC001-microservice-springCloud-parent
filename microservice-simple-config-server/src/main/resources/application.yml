@@ -5,9 +5,9 @@ spring:
   application:
     name: microservice-simple-config-server
   cloud:    config:      server:        git:
-          uri: https://github.com/guessagithub/Spring-cloud-config-repo.git
+          uri: https://github.com/guessagithub/Spring-cloud-config-repo
           username: guessagithub
-          password: 待定
+          password: secret
                     
     
 
